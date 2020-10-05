@@ -1,10 +1,12 @@
+const config = require('./config.json');
 const express = require('express');
 const {MongoClient} = require('mongodb');
 const app = express();
+console.log(config.port);
+
 app.use(express.static(__dirname + '/public'));
 
 var url = "";
-
 
 var partOne = `<!doctype html>
 <html lang="en">
@@ -225,4 +227,4 @@ app.get('/friends', (req, res) => {
   <p>ill update later</p>
 `+partThree)
 });
-app.listen(3000, () => console.log('Blog server opened on port 3000!'));
+app.listen(config.port, () => console.log('Blog server opened on port '+config.port+'!'));
