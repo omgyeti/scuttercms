@@ -1,0 +1,11 @@
+{
+    "port": 3000,
+    "mongodb": {
+        "username": "<your-username>",
+        "password": "<your-password>",
+        "host": "<your-host>",
+        "port": "<your-port>",
+        "database": "<your-database>",
+        "authSource": "<your-authSource>"
+    }
+}

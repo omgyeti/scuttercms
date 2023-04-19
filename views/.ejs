@@ -1,0 +1,13 @@
+
+
+<div class="container">
+  <% content.forEach(item => { %>
+    <div class="content-item">
+      <h2><%= item.title %></h2>
+      <p><%= item.content %></p>
+      <p><small><%= item.timestamp.toLocaleDateString() %></small></p>
+      <p><small>By <%= item.author %></small></p>
+    </div>
+  <% }) %>
+</div>
+

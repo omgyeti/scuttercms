@@ -1,14 +1,24 @@
 {
-  "name": "blog",
-  "version": "0.0.1",
-  "description": "Blog",
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
+  "name": "simple-cms",
+  "version": "1.0.0",
+  "description": "A simple CMS built with Node.js, Express, and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/simple-cms.git"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/simple-cms/issues"
+  },
+  "homepage": "https://github.com/yourusername/simple-cms#readme",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.17.1",
-    "mongodb": "^3.5.9",
-    "pug": "^3.0.0",
-    "uid": "^1.0.0"
+    "mongoose": "^6.10.5"
   }
 }

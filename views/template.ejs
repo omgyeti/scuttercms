@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pageTitle %></title>
+    <style>
+/* Set background color and font styles for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+/* Style the header and navigation bar */
+header {
+  background-color: #3c4b64;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 5.2rem; /* adjust font size as needed */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li.active a {
+  color: #fff;
+  background-color: #3c4b64;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #3c4b64;
+  text-align: center;
+}
+
+/* Style the footer */
+footer {
+  background-color: #3c4b64;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.text-muted {
+  opacity: 0.6;
+}
+
+/* Add mobile-responsive layout */
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+	</style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+			<li class="<%= activePage === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+			<li class="<%= activePage === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+			<li class="<%= activePage === 'links' ? 'active' : '' %>"><a href="/links">Links</a></li>
+			<li class="<%= activePage === 'projects' ? 'active' : '' %>"><a href="/projects">Projects</a></li>
+			<li class="<%= activePage === 'friends' ? 'active' : '' %>"><a href="/friends">Friends</a></li>
+		</ul>
+      </nav>
+    </header>
+    <main>
+      <%- content %>
+    </main>  
+    <footer>
+      <p class="text-center text-muted">&copy; Copyright 2023 g33k.me</p>
+    </footer>
+  </body>
+</html>
